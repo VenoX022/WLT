@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url(background.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 20px;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 20px;
+  gap: 20px;
+  width: 100%;
+  max-width: 1300px;
+}
+
+.container {
+  background-color: #0B192F;
+  flex: 1 1 300px;
+  padding: 30px;
+  border-radius: 12px;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.player-select-container {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  width: 100%;
+}
+
+.autocomplete-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #0B192F;
+  border: 1px solid #ccc;
+  border-top: none;
+  z-index: 10;
+  max-height: 150px;
+  overflow-y: auto;
+  width: 100%;
+  border-radius: 0 0 6px 6px;
+}
+
+.autocomplete-list div {
+  padding: 8px;
+  cursor: pointer;
+}
+
+.autocomplete-list div:hover {
+  background: #F1D086;
+  color: black;
+}
+
+h1, h2, h3, h4 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #F1D086;
+}
+
+input, select, button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+input, select {
+  background-color: #142035;
+  color: white;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+button {
+  background-color: #11336C;
+  color: #F0D081;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1B4FB3;
+}
+
+.match-card {
+  background-color: rgba(255,255,255,0.05);
+  padding: 10px;
+  margin: 5px 0;
+  border-radius: 8px;
+}
+
+.logout-btn {
+  margin: 20px auto 0;
+  display: block;
+  width: 60%;
+  background: #c90c0c;
+  color: #F0D081;
+}
+
+.logout-btn:hover {
+  background-color: #e62222;
+}
+
+.clear-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #ccc;
+  font-size: 18px;
+  z-index: 20;
+}
+
+.clear-btn:hover {
+  color: #F1D086;
+}
+
+.player-select {
+  border: none !important;
+  outline: none;
+  background: transparent;
+  width: 100%;
+}
+
+.player-row {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
+}
+
+.goal-input {
+  flex: 0 1 100px;
+}
+
+#matchFormContainer {
+  order: 2;
+}
+
+#matchHistoryContainer {
+  order: 1;
+}
+
+#statsContainer {
+  order: 3;
+}
+
+@media (max-width: 900px) {
+  .flex-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .container {
+    max-width: 100% !important;
+  }
+}
+
+#matchList button {
+  background-color: #142035;
+  color: #F1D086;
+  border: 1px solid #334;
+  padding: 10px;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 8px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+#matchList button:hover {
+  background-color: #1b2a45;
+}
+
+.main-header {
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.main-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
